@@ -1,5 +1,5 @@
 from django.contrib import admin
-from SQLapp.models import *
-# Imports and registers the Location and User models
+from API_proj2app.models import *
+# Imports and registers the Post and User models
 admin.site.register(User)
-admin.site.register(Location)
+admin.site.register(Post)
