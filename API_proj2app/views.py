@@ -12,14 +12,14 @@ from API_proj2app.models import *
 class index(View):
     def login(request):
         # Only POST
-        request.session["session_id"] = #set this to the username
+        request.session["session_name"] = #set this to the username #learned sessions from session documentation: https://docs.djangoproject.com/en/2.2/topics/http/sessions/
 
     def newUser(request):
         # Only POST
 
     # handle all requests at memories
     def handleMemories(request):
-        session_id = request.session["session_id"]
+        session_name = request.session["session_name"]
 
         if request.method == "GET":
 
