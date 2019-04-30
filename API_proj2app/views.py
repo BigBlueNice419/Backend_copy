@@ -10,20 +10,24 @@ from API_proj2app.models import *
 # Create your views here.
 
 class index(View):
-    # a default webpage to help you navigate
-    def default(request):
-        response = '''
-                <h1>Welcome to our page!</h1>
-                <p>Check out information.txt for help navigating</p>
-                <p style = "font-style: italic">-Katherine and Eric</p>
-                '''
-        # including text file from https://stackoverflow.com/questions/30768056/importing-external-txt-file-in-python
-        f = open('information.txt', 'r')
-        content = f.read()
-        response += '''<p>–––––––––––––––––––––<br>
-                    Information.txt:</p>'''
-        response += "<p>" + str(content) + "</p>"
-        return HttpResponse(response)
+    def login(request):
+        # Only POST
+        request.session["session_id"] = #set this to the username
+
+    def newUser(request):
+        # Only POST
+
+    # handle all requests at memories
+    def handleMemories(request):
+        session_id = request.session["session_id"]
+
+        if request.method == "GET":
+
+        if request.method == "POST":
+
+        if request.method == "PATCH":
+
+        if request.method == "DELETE":
 
 class userInfo(View):
 

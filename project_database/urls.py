@@ -21,10 +21,7 @@ from API_proj2app.views import *
 
 urlpatterns = [
     path('', index.default),
-    path('admin/', admin.site.urls),
-    path('<str:user_id>/poi', userInfo.aoi, name='poi'),
-    path('users/', userInfo.users, name = "users"),
-    path('users/<int:user_id>', userInfo.modifyUser, name="modifyUser"),
-    path('locations/',userInfo.locations, name = "locations"),
-    path('locations/<int:user_id>/<str:placeTitle>', userInfo.modifyLocation, name = "modifyLocation")
+    path('login/', admin.site.urls),
+    path('newUser/', userInfo.aoi, name='poi'),
+    path('memories/', userInfo.users, name = "users")
 ]

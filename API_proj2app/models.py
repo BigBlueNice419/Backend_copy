@@ -15,7 +15,7 @@ class User(models.Model):
     def __str__(self):
         return self.username + " (name: " + str(self.firstname) + " " + str(self.lastname) + ")"
 
-class Post(models.Model):
+class Memory(models.Model):
     userID = models.CharField(max_length=20, null=True)
     title = models.CharField(max_length=255)
     content = models.TextField()
