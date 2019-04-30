@@ -12,7 +12,7 @@ from API_proj2app.models import *
 class index(View):
     def login(request):
         # Only POST
-        request.session["session_name"] = #set this to the username #learned sessions from session documentation: https://docs.djangoproject.com/en/2.2/topics/http/sessions/
+        request.session["session_name"] = User.objects.get(username)#set this to the username #learned sessions from session documentation: https://docs.djangoproject.com/en/2.2/topics/http/sessions/
 
     def newUser(request):
         # Only POST
