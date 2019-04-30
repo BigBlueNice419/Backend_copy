@@ -130,7 +130,7 @@ class userInfo(View):
             return JsonResponse(data)
         if request.method == "POST":
             data = QueryDict(request.META["QUERY_STRING"]).dict()
-            Location.objects.create(userID=data["id"],
+            Memory.objects.create(userID=data["id"],
                                     title=data["title"],
                                     content=data["content"],
                                     image=data["image"],
